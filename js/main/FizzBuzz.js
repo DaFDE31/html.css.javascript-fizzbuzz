@@ -5,15 +5,15 @@ class FizzBuzz {
     }
   
     isFizz(num) {
-        return null;
+        return num%this.fizz == 0;
     }
   
     isBuzz(num) {
-        return null;
+        return num%this.buzz == 0;
     }
   
     isFizzBuzz(num) {
-        return null;
+        return num%this.fizz == 0 && num%this.buzz == 0;
     }
   
     getOutput(num) {
