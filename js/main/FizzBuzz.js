@@ -5,19 +5,34 @@ class FizzBuzz {
     }
   
     isFizz(num) {
-        return num%this.fizz == 0;
+        return num == 0? true : num % this.fizz == 0;
     }
   
     isBuzz(num) {
-        return num%this.buzz == 0;
+        return num == 0? true : num % this.buzz == 0;
     }
   
     isFizzBuzz(num) {
-        return num%this.fizz == 0 && num%this.buzz == 0;
+        return this.isBuzz(num) && this.isFizz(num);
     }
   
     getOutput(num) {
-        return null;
+        let ans = "";
+        for(let i = 0; i <= num; i++){
+            if(this.isFizz(i)){
+                ans += "Fizz";
+            }
+                
+            if(this.isBuzz(i)){
+                ans += "Buzz";
+            }
+                
+            if(!this.isFizz(i) && !this.isBuzz(i)){
+                str += i;
+            }
+            ans += " ";
+        }
+        return ans.trim();;
     }
   }
   
